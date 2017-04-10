@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6A1E676E-1FFA-4D68-80DA-33D007FE47A4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication4</RootNamespace>
+    <ProjectName>kinect2_with_sdk</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="E:\BaiduNetdiskDownload\pcl1.8_kinectV2\属性表\PCLDebug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\PCL 1.8.0\include\pcl-1.8;C:\Program Files (x86)\PCL 1.8.0\3rdParty\Boost\include\boost-1_59;C:\Program Files (x86)\PCL 1.8.0\3rdParty\Eigen\include\eigen3;C:\Program Files (x86)\PCL 1.8.0\3rdParty\FLANN\include\flann;C:\Program Files (x86)\PCL 1.8.0\3rdParty\OpenNI\Include;C:\Program Files (x86)\PCL 1.8.0\3rdParty\Qhull\include;C:\Program Files (x86)\PCL 1.8.0\3rdParty\VTK\include\vtk-7.0;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files (x86)\PCL 1.8.0\lib;C:\Program Files (x86)\PCL 1.8.0\3rdParty\Boost\lib;C:\Program Files (x86)\PCL 1.8.0\3rdParty\FLANN\lib;C:\Program Files (x86)\PCL 1.8.0\3rdParty\OpenNI\Lib;C:\Program Files (x86)\PCL 1.8.0\3rdParty\Qhull\lib;C:\Program Files (x86)\PCL 1.8.0\3rdParty\VTK\lib;C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_debug.lib;pcl_io_ply_debug.lib;pcl_kdtree_debug.lib;pcl_keypoints_debug.lib;pcl_ml_debug.lib;pcl_octree_debug.lib;pcl_outofcore_debug.lib;pcl_people_debug.lib;pcl_recognition_debug.lib;pcl_registration_debug.lib;pcl_sample_consensus_debug.lib;pcl_search_debug.lib;pcl_segmentation_debug.lib;pcl_stereo_debug.lib;pcl_surface_debug.lib;pcl_tracking_debug.lib;pcl_visualization_debug.lib;libboost_atomic-vc120-mt-1_59.lib;libboost_atomic-vc120-mt-gd-1_59.lib;libboost_chrono-vc120-mt-gd-1_59.lib;libboost_container-vc120-mt-gd-1_59.lib;libboost_context-vc120-mt-gd-1_59.lib;libboost_coroutine-vc120-mt-gd-1_59.lib;libboost_date_time-vc120-mt-gd-1_59.lib;libboost_exception-vc120-mt-gd-1_59.lib;libboost_filesystem-vc120-mt-gd-1_59.lib;libboost_graph-vc120-mt-gd-1_59.lib;libboost_iostreams-vc120-mt-gd-1_59.lib;libboost_locale-vc120-mt-gd-1_59.lib;libboost_log-vc120-mt-gd-1_59.lib;libboost_log_setup-vc120-mt-gd-1_59.lib;libboost_math_c99-vc120-mt-gd-1_59.lib;libboost_math_c99f-vc120-mt-gd-1_59.lib;libboost_math_c99l-vc120-mt-gd-1_59.lib;libboost_math_tr1-vc120-mt-gd-1_59.lib;libboost_math_tr1f-vc120-mt-gd-1_59.lib;libboost_math_tr1l-vc120-mt-gd-1_59.lib;libboost_mpi-vc120-mt-gd-1_59.lib;libboost_prg_exec_monitor-vc120-mt-gd-1_59.lib;libboost_program_options-vc120-mt-gd-1_59.lib;libboost_random-vc120-mt-gd-1_59.lib;libboost_regex-vc120-mt-gd-1_59.lib;libboost_serialization-vc120-mt-gd-1_59.lib;libboost_signals-vc120-mt-gd-1_59.lib;libboost_system-vc120-mt-gd-1_59.lib;libboost_test_exec_monitor-vc120-mt-gd-1_59.lib;libboost_thread-vc120-mt-gd-1_59.lib;libboost_timer-vc120-mt-gd-1_59.lib;libboost_unit_test_framework-vc120-mt-gd-1_59.lib;libboost_wave-vc120-mt-gd-1_59.lib;libboost_wserialization-vc120-mt-gd-1_59.lib;vtkalglib-7.0-gd.lib;vtkChartsCore-7.0-gd.lib;vtkCommonColor-7.0-gd.lib;vtkCommonComputationalGeometry-7.0-gd.lib;vtkCommonCore-7.0-gd.lib;vtkCommonDataModel-7.0-gd.lib;vtkCommonExecutionModel-7.0-gd.lib;vtkCommonMath-7.0-gd.lib;vtkCommonMisc-7.0-gd.lib;vtkCommonSystem-7.0-gd.lib;vtkCommonTransforms-7.0-gd.lib;vtkDICOMParser-7.0-gd.lib;vtkDomainsChemistry-7.0-gd.lib;vtkDomainsChemistryOpenGL2-7.0-gd.lib;vtkexoIIc-7.0-gd.lib;vtkexpat-7.0-gd.lib;vtkFiltersAMR-7.0-gd.lib;vtkFiltersCore-7.0-gd.lib;vtkFiltersExtraction-7.0-gd.lib;vtkFiltersFlowPaths-7.0-gd.lib;vtkFiltersGeneral-7.0-gd.lib;vtkFiltersGeneric-7.0-gd.lib;vtkFiltersGeometry-7.0-gd.lib;vtkFiltersHybrid-7.0-gd.lib;vtkFiltersHyperTree-7.0-gd.lib;vtkFiltersImaging-7.0-gd.lib;vtkFiltersModeling-7.0-gd.lib;vtkFiltersParallel-7.0-gd.lib;vtkFiltersParallelImaging-7.0-gd.lib;vtkFiltersProgrammable-7.0-gd.lib;vtkFiltersSelection-7.0-gd.lib;vtkFiltersSMP-7.0-gd.lib;vtkFiltersSources-7.0-gd.lib;vtkFiltersStatistics-7.0-gd.lib;vtkFiltersTexture-7.0-gd.lib;vtkFiltersVerdict-7.0-gd.lib;vtkfreetype-7.0-gd.lib;vtkGeovisCore-7.0-gd.lib;vtkglew-7.0-gd.lib;vtkGUISupportQt-7.0-gd.lib;vtkGUISupportQtSQL-7.0-gd.lib;vtkhdf5-7.0-gd.lib;vtkhdf5_hl-7.0-gd.lib;vtkImagingColor-7.0-gd.lib;vtkImagingCore-7.0-gd.lib;vtkImagingFourier-7.0-gd.lib;vtkImagingGeneral-7.0-gd.lib;vtkImagingHybrid-7.0-gd.lib;vtkImagingMath-7.0-gd.lib;vtkImagingMorphological-7.0-gd.lib;vtkImagingSources-7.0-gd.lib;vtkImagingStatistics-7.0-gd.lib;vtkImagingStencil-7.0-gd.lib;vtkInfovisCore-7.0-gd.lib;vtkInfovisLayout-7.0-gd.lib;vtkInteractionImage-7.0-gd.lib;vtkInteractionStyle-7.0-gd.lib;vtkInteractionWidgets-7.0-gd.lib;vtkIOAMR-7.0-gd.lib;vtkIOCore-7.0-gd.lib;vtkIOEnSight-7.0-gd.lib;vtkIOExodus-7.0-gd.lib;vtkIOExport-7.0-gd.lib;vtkIOGeometry-7.0-gd.lib;vtkIOImage-7.0-gd.lib;vtkIOImport-7.0-gd.lib;vtkIOInfovis-7.0-gd.lib;vtkIOLegacy-7.0-gd.lib;vtkIOLSDyna-7.0-gd.lib;vtkIOMINC-7.0-gd.lib;vtkIOMovie-7.0-gd.lib;vtkIONetCDF-7.0-gd.lib;vtkIOParallel-7.0-gd.lib;vtkIOParallelXML-7.0-gd.lib;vtkIOPLY-7.0-gd.lib;vtkIOSQL-7.0-gd.lib;vtkIOVideo-7.0-gd.lib;vtkIOXML-7.0-gd.lib;vtkIOXMLParser-7.0-gd.lib;vtkjpeg-7.0-gd.lib;vtkjsoncpp-7.0-gd.lib;vtklibxml2-7.0-gd.lib;vtkmetaio-7.0-gd.lib;vtkNetCDF-7.0-gd.lib;vtkNetCDF_cxx-7.0-gd.lib;vtkoggtheora-7.0-gd.lib;vtkParallelCore-7.0-gd.lib;vtkpng-7.0-gd.lib;vtkproj4-7.0-gd.lib;vtkRenderingAnnotation-7.0-gd.lib;vtkRenderingContext2D-7.0-gd.lib;vtkRenderingContextOpenGL2-7.0-gd.lib;vtkRenderingCore-7.0-gd.lib;vtkRenderingFreeType-7.0-gd.lib;vtkRenderingImage-7.0-gd.lib;vtkRenderingLabel-7.0-gd.lib;vtkRenderingLOD-7.0-gd.lib;vtkRenderingOpenGL2-7.0-gd.lib;vtkRenderingQt-7.0-gd.lib;vtkRenderingVolume-7.0-gd.lib;vtkRenderingVolumeOpenGL2-7.0-gd.lib;vtksqlite-7.0-gd.lib;vtksys-7.0-gd.lib;vtktiff-7.0-gd.lib;vtkverdict-7.0-gd.lib;vtkViewsContext2D-7.0-gd.lib;vtkViewsCore-7.0-gd.lib;vtkViewsInfovis-7.0-gd.lib;vtkViewsQt-7.0-gd.lib;vtkzlib-7.0-gd.lib;flann-gd.lib;flann_cpp_s-gd.lib;flann_s-gd.lib;qhull-gd.lib;qhullcpp-gd.lib;qhullstatic-gd.lib;qhullstatic_r-gd.lib;qhull_p-gd.lib;qhull_r-gd.lib;OpenNI2.lib;Kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cloud_viewer.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
