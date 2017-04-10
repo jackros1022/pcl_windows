@@ -1,3 +1,9 @@
+/*
+完成的功能有：三维点云获取，点云数据下采样（为后续处理加速），平面检测和获取，3D显示 在一个老外牛人的程序上改的，原版只支持点云获取和显示，不包括点云处理。
+另外，原版有个bug，会导致大量的CPU时间用来显示无效的点云数据，已被我这版修正。
+程序中有个宏开关CLOUD_DISPLAY，如果定义这个宏则有三维显示，如果不定义这个宏则关闭三维显示功能。关闭三维显示的目的是为了加速三维点云数据的处理。
+
+*/
 // Disable Error C4996 that occur when using Boost.Signals2.
 #ifdef _DEBUG
 #define _SCL_SECURE_NO_WARNINGS
@@ -100,6 +106,7 @@ int main(int argc, char* argv[])
 		if (cloud && lock.owns_lock()){
 			// handle cloud here
 
+
 			// Create the filtering object: downsample the dataset using a leaf size of 1cm
 			pcl::PointCloud<PointType>::Ptr cloud_filtered(new pcl::PointCloud<PointType>);
 			pcl::VoxelGrid<PointType> sor;
@@ -109,13 +116,10 @@ int main(int argc, char* argv[])
 			sor.filter(*cloud_filtered);
 			cloud = cloud_filtered;
 
-
 			/*
 			// created RandomSampleConsensus object and compute the appropriated model
-			pcl::SampleConsensusModelSphere<PointType>::Ptr
-			model_s(new pcl::SampleConsensusModelSphere<PointType>(cloud_filtered));
-			pcl::SampleConsensusModelPlane<PointType>::Ptr
-			model_p(new pcl::SampleConsensusModelPlane<PointType>(cloud_filtered));
+			pcl::SampleConsensusModelSphere<PointType>::Ptr model_s(new pcl::SampleConsensusModelSphere<PointType>(cloud_filtered));
+			pcl::SampleConsensusModelPlane<PointType>::Ptr  model_p(new pcl::SampleConsensusModelPlane<PointType>(cloud_filtered));
 
 			if (is_plane)
 			{
@@ -155,14 +159,19 @@ int main(int argc, char* argv[])
 			cloud = final;
 			*/
 
-			if (cloud->size() != 0){
+			if (cloud->size() != 0)
+			{
 				/* Processing to Point Cloud */
-#ifdef CLOUD_DISPLAY
+// #ifdef CLOUD_DISPLAY
 				// Update Point Cloud
 				if (!viewer->updatePointCloud(cloud, "cloud")){
 					viewer->addPointCloud(cloud, "cloud");
 				}
-#endif
+// #endif
+			}
+			else
+			{
+				std::cout << "cloud 为 0" << std::endl;
 			}
 		}
 	}

@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\CS 376 Computer Vision\KinectGrabber-Kinect2Grabber\KinectGrabber-Kinect2Grabber\Sample\kinect2_grabber.h">
+    <ClInclude Include="kinect2_grabber.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\CS 376 Computer Vision\KinectGrabber-Kinect2Grabber\KinectGrabber-Kinect2Grabber\Sample\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

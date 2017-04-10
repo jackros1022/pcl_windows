@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\CS 376 Computer Vision\KinectGrabber-Kinect2Grabber\KinectGrabber-Kinect2Grabber\Sample\kinect2_grabber.h" />
+    <ClInclude Include="kinect2_grabber.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Desktop\CS 376 Computer Vision\KinectGrabber-Kinect2Grabber\KinectGrabber-Kinect2Grabber\Sample\main.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6A1E676E-1FFA-4D68-80DA-33D007FE47A4}</ProjectGuid>
